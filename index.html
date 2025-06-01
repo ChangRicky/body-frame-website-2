@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>骨架判讀與穿搭建議</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 直接使用 container 来居中，不需要额外的 wrapper -->
+  <div class="container">
+    <h1>骨架判讀與穿搭建議</h1>
+
+    <!-- 表单：用户输入数值 -->
+    <form id="frame-form">
+      <div class="form-group">
+        <label for="height">身高 (cm)</label>
+        <input type="number" id="height" required />
+      </div>
+      <div class="form-group">
+        <label for="shoulder">肩寬 (cm)</label>
+        <input type="number" id="shoulder" required />
+      </div>
+      <div class="form-group">
+        <label for="chest">胸寬 (cm)</label>
+        <input type="number" id="chest" required />
+      </div>
+      <div class="form-group">
+        <label for="hip">臀寬 (cm)</label>
+        <input type="number" id="hip" required />
+      </div>
+      <button type="submit">判讀骨架</button>
+    </form>
+
+    <!-- Loading 区：初始隐藏，仅在点击后显示 -->
+    <div id="loading" class="hidden">
+      <img src="./assets/character.gif" alt="Loading Icon" class="loading-gif" />
+    </div>
+
+    <!-- 结果区：初始隐藏，点击后显示 -->
+    <div id="result" class="hidden">
+      <!-- 文字结果 -->
+      <div id="result-text"></div>
+
+      <!-- 示意图 + 下方说明文字 -->
+      <div id="result-demo" class="demo-img-container hidden">
+        <img id="demo-img" src="" alt="骨架示意圖" />
+        <p id="demo-caption" class="demo-caption"></p>
+      </div>
+
+      <!-- “加入技安社群” 按钮 -->
+      <div class="join-line">
+        <a href="https://lin.ee/XomFfr1" target="_blank">加入技安社群</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
